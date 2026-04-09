@@ -161,7 +161,7 @@ function ParticleNetwork() {
 
         ctx.beginPath();
         ctx.arc(a.x, a.y, 1.4, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(130, 186, 255, 0.5)';
+        ctx.fillStyle = 'rgba(154, 166, 181, 0.54)';
         ctx.fill();
 
         for (let j = i + 1; j < points.length; j += 1) {
@@ -174,7 +174,7 @@ function ParticleNetwork() {
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = `rgba(130, 186, 255, ${alpha * 0.2})`;
+            ctx.strokeStyle = `rgba(154, 166, 181, ${alpha * 0.22})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -237,7 +237,7 @@ function Header({ now, highRiskCount, theme, onToggleTheme }) {
       </div>
       <div className="headerRight">
         <button className="chipGhost clickable" onClick={onToggleTheme}>
-          {theme === 'light' ? 'Dark Cyber' : 'Light Cyber'}
+          {theme === 'light' ? 'Slate Dark' : 'Slate Light'}
         </button>
         <span className="chipGhost">High risk: {highRiskCount}</span>
         <span className="liveDot" aria-hidden="true" />
@@ -593,9 +593,9 @@ function RiskTrendChart({ logs }) {
         <svg className="trendSvg" viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="Risk trend">
           <defs>
             <linearGradient id="trendStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#00d8a0" />
-              <stop offset="60%" stopColor="#ffaa00" />
-              <stop offset="100%" stopColor="#ff4d4d" />
+              <stop offset="0%" stopColor="#e1e7ee" />
+              <stop offset="60%" stopColor="#aab4c0" />
+              <stop offset="100%" stopColor="#7f8a98" />
             </linearGradient>
           </defs>
           <path d="M 0 100 L 100 100" stroke="rgba(255,255,255,0.1)" />
